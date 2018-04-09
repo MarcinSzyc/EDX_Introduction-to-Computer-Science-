@@ -19,8 +19,7 @@ while test > 0.1:
     elif previousBalance >0:
         monthlyPaymentLowerBound = minimumMonthlyPayment
     previousBalance = balance
-    minimumMonthlyPayment = (monthlyPaymentUpperBound + monthlyPaymentLowerBound)/2
-    minimumMonthlyPayment = round(minimumMonthlyPayment,2)
+    minimumMonthlyPayment = round((monthlyPaymentUpperBound + monthlyPaymentLowerBound)/2,2)
     for i in range(12):
         monthlyUnpaidBalance = previousBalance - minimumMonthlyPayment
         unpaidBalanceEachMonth = monthlyUnpaidBalance + (monthlyInterestRate*monthlyUnpaidBalance)
